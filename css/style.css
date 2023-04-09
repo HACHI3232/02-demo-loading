@@ -1,6 +1,6 @@
 /* ローディング画面 */
 #loading {
-	transition: all ls;
+	transition: all 1s;
 	background-color: #ddd;
 	position: fixed;
 	z-index: 9999;
@@ -8,17 +8,22 @@
 	display: grid;
 	place-items: center;
 }
-
 .spinner {
 	width: 200px;
 	height: 200px;
+}
+
+/* ローディング完了したらローディング画面を隠す */
+.loaded {
+	opacity: 0;
+	visibility: hidden;
 }
 
 /* コンテンツ部分 */
 .gallery {
 	display: grid;
 	gap: 10px;
-	grid-template-columns: repeat(auto-fit, minmax(300px 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 img {
 	width: 100%;
